@@ -23,7 +23,7 @@ bolean p = NumberFun.isNiven(a);
 
 ## Functions of class NumberFun:
 
-**boolean isNiven(int n):
+**boolean isNiven(int n):**
 
 This function checks if the argument passed to is a Niven number or not and returns a boolean type value true or false.
 
