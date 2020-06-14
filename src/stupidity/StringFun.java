@@ -259,37 +259,84 @@ public  class StringFun {
 
     }
 
-    public static String[] getAllPermutations(String string) throws Exception {
-        char[] ch = string.toCharArray();
-        String numString = "";
-        for (int i = 0; i < string.length(); i++) {
-            numString += Integer.toString(i + 1);
-        }
-
-        int sizeOfArray = 1;
-
-        for(int a = 1; a <= ch.length; a++)
-            sizeOfArray *= a;
-
-
-       
-        int num = Integer.valueOf(numString);
-        String str;
-        int lengthOfNumString = String.valueOf(num).length();
-        int startIndex = (int) Math.pow(10, lengthOfNumString - 1);
-        int endIndex = (int) Math.pow(10, lengthOfNumString);
-
-        String[] permutations = new String[sizeOfArray];
-
-        int p = 0;
-
-        for (int i = startIndex; i < endIndex; i++) {
-            if (areJumbles(String.valueOf(num), String.valueOf(i))) {
-                permutations[p] = formStringWithIntArray(String.valueOf(i), ch);
-                p++;
+    public static String arrangeDigitsInAscending(String str) throws Exception
+    {
+        String string="";
+        int digitCount=0;
+            for (int j = 0; j <10 ; j++) {
+                for (int i = 0; i <str.length() ; i++) {
+                    char ch = str.charAt(i);
+                    if(String.valueOf(ch).equals(String.valueOf(j))) {
+                        string += ch;
+                        digitCount++;
+                    }
+                }
+            }
+            if(digitCount<str.length())
+            {
+                throw new Exception("String should onle contain digits");
+            }else {
+                return string;
+            }
+    }
+    public static String arrangeDigitsInDescending(String str) throws Exception
+    {
+        String string="";
+        int digitCount=0;
+        for (int j = 9; j >=0 ; j--) {
+            for (int i = 0; i <str.length() ; i++) {
+                char ch = str.charAt(i);
+                if(String.valueOf(ch).equals(String.valueOf(j))) {
+                    string += ch;
+                    digitCount++;
+                }
             }
         }
-        return permutations;
+        if(digitCount<str.length())
+        {
+            throw new Exception("String should onle contain digits");
+        }else {
+            return string;
+        }
+    }
+
+    public static String[] getAllPermutations(String string) throws Exception {
+        char[] ch = string.toCharArray();
+        if(ch.length>9){
+            throw new Exception("String is too long");
+        }else {
+            if(ch.length>=7){
+                System.out.println("String is too long it may take some time :)");
+            }
+            String numString = "";
+            for (int i = 0; i < string.length(); i++) {
+                numString += Integer.toString(i + 1);
+            }
+
+            int sizeOfArray = 1;
+
+            for (int a = 1; a <= ch.length; a++)
+                sizeOfArray *= a;
+
+
+            int num = Integer.valueOf(numString);
+            String str;
+            int lengthOfNumString = String.valueOf(num).length();
+            int startIndex = Integer.valueOf(arrangeDigitsInAscending(numString));
+            int endIndex = Integer.valueOf(arrangeDigitsInDescending(numString));
+
+            String[] permutations = new String[sizeOfArray];
+
+            int p = 0;
+
+            for (int i = startIndex; i <= endIndex; i++) {
+                if (areJumbles(String.valueOf(num), String.valueOf(i))) {
+                    permutations[p] = formStringWithIntArray(String.valueOf(i), ch);
+                    p++;
+                }
+            }
+            return permutations;
+        }
     }
 
     public static String formStringWithCharArray(char[] chars) {
