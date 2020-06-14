@@ -17,7 +17,7 @@ eg-
 int a = 126;
 bolean p = NumberFun.isNiven(a);
 
-**** NOTE: The data type of the varaible in which the result is stored, should be the same as the return type of the function. ******
+**NOTE: The data type of the varaible in which the result is stored, should be the same as the return type of the function.**
 
                                                        
 
