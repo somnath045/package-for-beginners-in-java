@@ -23,75 +23,75 @@ bolean p = NumberFun.isNiven(a);
 
 ## Functions of class NumberFun:
 
-boolean isNiven(int n):
+###### boolean isNiven(int n):
 
 This function checks if the argument passed to is a Niven number or not and returns a boolean type value true or false.
 
-boolean isDuck(int n):
+###### boolean isDuck(int n):
 
 This function checks if the argument passed to is a Duck number or not and returns a boolean type value true or false.
 
-boolean isPronic(int n):
+###### boolean isPronic(int n):
 
 This function checks if the argument passed to is a Pronic number or not and returns a boolean type value true or false.
 
-boolean isTwistedPrime(int n):
+###### boolean isTwistedPrime(int n):
 
 This function checks if the argument passed to is a Twisted Prime number or not and returns a boolean type value true or false.
 
-boolean areTwinPrime(int n, int m):
+###### boolean areTwinPrime(int n, int m):
 
 This function checks if the argument passed to are a Twin Prime numbers or not and returns a boolean type value true or false.
 
-boolean isMagic(int n):
+###### boolean isMagic(int n):
 
 This function checks if the argument passed to is a Magic number or not and returns a boolean type value true or false.
 
-boolean isHappy(int n):
+###### boolean isHappy(int n):
 
 This function checks if the argument passed to is a Happy number or not and returns a boolean type value true or false.
 
-boolean isAbundant(int n):
+###### boolean isAbundant(int n):
 
 This function checks if the argument passed to is a Abundant number or not and returns a boolean type value true or false.
 
-boolean isHoax(int n):
+###### boolean isHoax(int n):
 
 This function checks if the argument passed to is a Hoax number or not and returns a boolean type value true or false.
 
-boolean isDisarium(int n):
+###### boolean isDisarium(int n):
 
 This function checks if the argument passed to is a Disarium number or not and returns a boolean type value true or false.
 
-boolean isEvil(int n):
+###### boolean isEvil(int n):
 
 This function checks if the argument passed to is a Evil number or not and returns a boolean type value true or false.
 
-boolean isKeith(int n):
+###### boolean isKeith(int n):
 
 This function checks if the argument passed to is a Keith number or not and returns a boolean type value true or false.
 
-boolean isArmstrong(int n):
+###### boolean isArmstrong(int n):
 
 This function checks if the argument passed to is a Armstrong number or not and returns a boolean type value true or false.
 
-boolean isBuzz(int n):
+###### boolean isBuzz(int n):
 
 This function checks if the argument passed to is a Buzz number or not and returns a boolean type value true or false.
 
-boolean isSpecial(int n):
+###### boolean isSpecial(int n):
 
 This function checks if the argument passed to is a Special number or not and returns a boolean type value true or false.
 
-boolean isPerfect(int n):
+###### boolean isPerfect(int n):
 
 This function checks if the argument passed to is a Perfect number or not and returns a boolean type value true or false.
 
-boolean isTriangle(int n):
+###### boolean isTriangle(int n):
 
 This function checks if the argument passed to is a Triangle number or not and returns a boolean type value true or false.
 
-int getFactorial(int n):
+###### int getFactorial(int n):
 
 This function returns the factorial value of integer number passed as argument.
 
