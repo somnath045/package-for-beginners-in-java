@@ -272,7 +272,7 @@ public  class StringFun {
             sizeOfArray *= a;
 
 
-        System.out.println("numString" + numString);
+       
         int num = Integer.valueOf(numString);
         String str;
         int lengthOfNumString = String.valueOf(num).length();
@@ -292,7 +292,7 @@ public  class StringFun {
         return permutations;
     }
 
-    private static String formStringWithCharArray(char[] chars) {
+    public static String formStringWithCharArray(char[] chars) {
         String string = "";
         for (char c :
                 chars) {
