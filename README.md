@@ -4,7 +4,7 @@ Uses of functions in java package stupidity:
 
                                             
 
-## NOTE: All the functions of this package can be used as follows:
+###### NOTE: All the functions of this package can be used as follows:
 
 <class name>.<function name>(<required parameter(s)>);
 
@@ -17,11 +17,11 @@ eg-
 int a = 126;
 bolean p = NumberFun.isNiven(a);
 
-## NOTE: The data type of the varaible in which the result is stored, should be the same as the return type of the function.
+###### NOTE: The data type of the varaible in which the result is stored, should be the same as the return type of the function.
 
                                                        
 
-# Functions of class NumberFun:
+## Functions of class NumberFun:
 
 boolean isNiven(int n):
 
@@ -97,7 +97,7 @@ This function returns the factorial value of integer number passed as argument.
 
                                                       
 
-# Functions of class StringFun:
+## Functions of class StringFun:
 
 boolean areAnagrams(String string1, String string2):
 
