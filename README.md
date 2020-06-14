@@ -4,7 +4,7 @@ Uses of functions in java package stupidity:
 
                                                        ------------------------------------------------------------------------ 
 
-NOTE: All the functions of this package can be used as follows:
+#NOTE: All the functions of this package can be used as follows:
 
 <class name>.<function name>(<required parameter(s)>);
 
@@ -149,4 +149,4 @@ This function takes an integer as argument and returns an integer array of all p
 
 String[] getAllPermutations(String string):
 
-This function takes a String as an argument and returns a String rray of all its permutations(i.e., all the combinations of its character or simply all its anagrams).
+This function takes a String as an argument and returns a String rray of all its permutations(i.e., all the possible combinations of its characters).
