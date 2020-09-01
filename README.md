@@ -147,6 +147,6 @@ This function returns the middle word present in the sentence passed to it as ar
 
 This function takes an integer as argument and returns an integer array of all possible combinatins of that number.
 
-**String[] getAllPermutations(String string):**
+**void printPermutations(String string):**
 
-This function takes a String as an argument and returns a String rray of all its permutations(i.e., all the possible combinations of its characters).
+This function takes a String as an argument and prints all of its permutations(i.e., all the possible combinations of its characters).
