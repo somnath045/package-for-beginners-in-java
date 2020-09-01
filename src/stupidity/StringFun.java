@@ -299,44 +299,32 @@ public  class StringFun {
             return string;
         }
     }
-
-    public static String[] getAllPermutations(String string) throws Exception {
-        char[] ch = string.toCharArray();
-        if(ch.length>9){
-            throw new Exception("String is too long");
-        }else {
-            if(ch.length>=7){
-                System.out.println("String is too long it may take some time :)");
-            }
-            String numString = "";
-            for (int i = 0; i < string.length(); i++) {
-                numString += Integer.toString(i + 1);
-            }
-
-            int sizeOfArray = 1;
-
-            for (int a = 1; a <= ch.length; a++)
-                sizeOfArray *= a;
-
-
-            int num = Integer.valueOf(numString);
-            String str;
-            int lengthOfNumString = String.valueOf(num).length();
-            int startIndex = Integer.valueOf(arrangeDigitsInAscending(numString));
-            int endIndex = Integer.valueOf(arrangeDigitsInDescending(numString));
-
-            String[] permutations = new String[sizeOfArray];
-
-            int p = 0;
-
-            for (int i = startIndex; i <= endIndex; i++) {
-                if (areJumbles(String.valueOf(num), String.valueOf(i))) {
-                    permutations[p] = formStringWithIntArray(String.valueOf(i), ch);
-                    p++;
-                }
-            }
-            return permutations;
+    
+    private void permutations(String string , int l , int r ){
+        if(l == r){
+            System.out.println(string);
+            return;
         }
+
+        for (int i = l; i <= r; i++) {
+            string = stringFun.interchange(string , l , i);
+            permutations( string, l+1 , r);
+            string = stringFun.interchange(string , l , i);
+        }
+
+    }
+
+   private String interchange(String string , int a , int b){
+        char[] chars = string.toCharArray();
+        char temp = chars[a];
+        chars[a] = chars[b];
+        chars[b] = temp;
+        return String.valueOf(chars);
+    }
+
+
+    public static void printPermutations(String string){
+        stringFun.permutations(string, 0, string.length()-1);
     }
 
     public static String formStringWithCharArray(char[] chars) {
